@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ONG</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/logo.jpeg" rel="icon">
+<link rel="stylesheet" href="img/logo.png">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-primary text-white d-none d-lg-flex wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-3">
+            <div class="d-flex align-items-center">
+                <a href="index.html">
+                    <img width="100px" height="50px" src="img/logo.png" alt="">
+                </a>
+                <div class="ms-auto d-flex align-items-center">
+                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>Abidjan, Côte d'Ivoire</small>
+                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>infoswini@gmail.com</small>
+                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>+225 05 05 883 696</small>
+                    <div class="ms-3 d-flex">
+                        <a class="btn btn-sm-square btn-light text-primary ms-2" href=""><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-sm-square btn-light text-primary ms-2" href=""><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-sm-square btn-light text-primary ms-2" href=""><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-white sticky-top wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
+                <a href="index.html" class="navbar-brand d-lg-none">
+                    <img width="100px" height="50px" src="img/logo.png" alt="">
+                </a>
+                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="Vision.html" class="nav-item nav-link">Vision</a>
+                        <a href="Activite.html" class="nav-item nav-link">Activite</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Thematique</a>
+                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                                <a href="feature.html" class="dropdown-item">Features</a>
+                                <a href="team.html" class="dropdown-item">Our Team</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="appoinment.html" class="dropdown-item">Appoinment</a>
+                                <a href="404.html" class="dropdown-item">404 Page</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+<!-- Bouton avec rayonnement rectangulaire orange -->
+<div class="ms-auto d-none d-lg-block position-relative">
+    <a href="#" class="btn-donate-glow btn btn-primary py-2 px-4">Faites un Don</a>
+</div>
+
+<style>
+/* Style du bouton avec fond orange vif */
+.btn-donate-glow {
+    position: relative;
+    z-index: 1;
+    background-color: #FFA500 !important;
+    border: none;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 20px 5px rgba(255, 140, 0, 0.7);
+    animation: intenseRayon 2s infinite ease-in-out;
+}
+
+/* Rayonnement animé en forme de rectangle lumineux */
+@keyframes intenseRayon {
+    0% {
+        box-shadow:
+            0 0 10px rgba(255, 140, 0, 0.6),
+            0 0 20px rgba(255, 140, 0, 0.4),
+            0 0 30px rgba(255, 140, 0, 0.2);
+    }
+    50% {
+        box-shadow:
+            0 0 30px 10px rgba(255, 140, 0, 0.9),
+            0 0 60px 20px rgba(255, 100, 0, 0.5),
+            0 0 90px 30px rgba(255, 100, 0, 0.2);
+    }
+    100% {
+        box-shadow:
+            0 0 10px rgba(255, 140, 0, 0.6),
+            0 0 20px rgba(255, 140, 0, 0.4),
+            0 0 30px rgba(255, 140, 0, 0.2);
+    }
+}
+</style>
+
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-6 wow fadeIn" data-wow-delay="0.1s">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1">
+                    <img class="img-fluid" src="img/banniere1.jpg" alt="Image">
+                </button>
+                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="1" aria-label="Slide 2">
+                    <img class="img-fluid" src="img/banniere2.jpg" alt="Image">
+                </button>
+                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="2" aria-label="Slide 3">
+                    <img class="img-fluid" src="img/banniere3.jpg" alt="Image">
+                </button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/banniere1.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <h1 class="display-1 text-uppercase text-white mb-4 animated zoomIn">Agir Pour Sauvez Une Vie
+                        </h1>
+                        <a href="#" class="btn-donate-glow btn btn-primary py-3 px-4">Faite Un Don</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/banniere2.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <h1 class="display-1 text-uppercase text-white mb-4 animated zoomIn">Ensemble, Main Dans La Main 
+                        </h1>
+                        <a href="#" class="btn-donate-glow btn btn-primary py-3 px-4">Faite Un Don</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/banniere3.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <h1 class="display-1 text-uppercase text-white mb-4 animated zoomIn">Jeunesse africaine, ton continent a besoin de toi
+                        </h1>
+                        <a href="#" class="btn-donate-glow btn btn-primary py-3 px-4">Faite Un Don</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid pt-6 pb-6">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="about-img">
+                        <img class="img-fluid w-100" src="img/about1.jpg">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="display-6 text-uppercase mb-4">
+                        Agir pour les vies en détresse : un engagement urgent
+                        </h1>
+                    <p class="mb-4">Dans un monde marqué par l'injustice sociale, les conflits, l'exclusion et la précarité, des milliers de jeunes, de femmes et d'enfants se retrouvent chaque jour sans repères ni soutien. Notre ONG s'engage avec détermination pour leur offrir protection, écoute, accompagnement et un avenir meilleur. Malgré les défis liés au manque de financement et à l'évolution incertaine du contexte international, nous restons mobilisés pour répondre aux urgences et bâtir des solutions durables. </p>
+                    <div class="row g-5 mb-4">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 btn-xl-square bg-light me-3">
+                                    <i class="fa fa-users-cog fa-2x text-primary"></i>
+                                </div>
+                                <h5 class="lh-base text-uppercase mb-0">Équipe Dévouée & Expérimentée</h5>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 btn-xl-square bg-light me-3">
+                                    <i class="fa fa-tachometer-alt fa-2x text-primary"></i>
+                                </div>
+                                <h5 class="lh-base text-uppercase mb-0">Actions Rapides & Fiables</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <p><i class="fa fa-check-square text-primary me-3"></i>Écoute active et accompagnement personnalisé
+                    </p>
+                    <p><i class="fa fa-check-square text-primary me-3"></i>Programmes de réinsertion sociale et professionnelle
+                    </p>
+                    <p><i class="fa fa-check-square text-primary me-3"></i>Protection des droits et accès aux soins essentiels
+                    </p>
+                    <div class="border border-5 border-primary p-4 text-center mt-4">
+                        <h4 class="lh-base text-uppercase mb-0">Un seul don peut redonner espoir à des centaines de vies</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+
+
+    <!-- Features Start -->
+    <div class="container-fluid feature mt-6 mb-6 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-0 justify-content-end">
+                <div class="col-lg-6 pt-5">
+                    <div class="mt-5">
+                        <h1 class="display-6 text-white text-uppercase mb-4 wow fadeIn" data-wow-delay="0.3s">Qui sommes-nous ?</h1>
+                        <p class="text-light mb-4 wow fadeIn" data-wow-delay="0.4s">Wiri ONG est une organisation humanitaire engagée pour les jeunes, les femmes et les enfants en détresse. Présente sur plusieurs continents, notre équipe agit en première ligne face à la pauvreté, aux violences, aux crises humanitaires et aux inégalités. Nous allions aide d’urgence et solutions durables pour bâtir un avenir plus juste et plus humain.</p>
+                        <div class="row g-4 pt-2 mb-4">
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                                <div class="flex-column text-center border border-5 border-primary p-5">
+                                    <h1 class="text-white" data-toggle="counter-up">7092629</h1>
+                                    <p class="text-white text-uppercase mb-0">vies impactées positivement dans le monde l’an dernier</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="flex-column text-center border border-5 border-primary p-5">
+                                    <h1 class="text-white" data-toggle="counter-up">43</h1>
+                                    <p class="text-white text-uppercase mb-0">pays où nous travaillons</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-primary border-bottom-0 p-5">
+                            <div class="experience mb-4 wow fadeIn" data-wow-delay="0.6s">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-white text-uppercase">Experience</span>
+                                    <span class="text-white">90%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="experience wow fadeIn" data-wow-delay="0.7s">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-white text-uppercase">de notre personnel vient des communautés locales</span>
+                                    <span class="text-white">95%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+
+    <!-- Service Start -->
+    <div class="container-fluid service pt-6 pb-6">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="display-6 text-uppercase mb-5">Activités récemment organisées</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item">
+                        <div class="service-inner pb-5">
+                            <img class="img-fluid w-100" src="img/nourriture.jpg" alt="">
+                            <div class="service-text px-5 pt-4">
+                                <h5 class="text-uppercase">Distribution alimentaire</h5>
+                                    <p>Nous avons distribué plus de 500 kits alimentaires dans les zones les plus touchées par la sécheresse.
+                                    </p>
+                            </div>
+                            <a class="btn btn-light px-3" href="">Voir Plus<i
+                                    class="bi bi-chevron-double-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item">
+                        <div class="service-inner pb-5">
+                            <img class="img-fluid w-100" src="img/sante1.jpg" alt="">
+                            <div class="service-text px-5 pt-4">
+                                <h5 class="text-uppercase">Clinique mobile</h5>
+                                    <p>Notre équipe médicale a soigné plus de 300 personnes en zones reculées sans accès aux soins de base.
+                                    </p>
+                            </div>
+                            <a class="btn btn-light px-3" href="">Voir Plus<i
+                                    class="bi bi-chevron-double-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item">
+                        <div class="service-inner pb-5">
+                            <img class="img-fluid w-100" src="img/hygien.jpg" alt="">
+                            <div class="service-text px-5 pt-4">
+                                <h5 class="text-uppercase">Hygiène & Prévention</h5>
+                                    <p>Ateliers pour enfants sur l’importance du lavage des mains et de l’hygiène corporelle en milieu scolaire.
+                                    </p>
+                            </div>
+                            <a class="btn btn-light px-3" href="">Voir Plus<i
+                                    class="bi bi-chevron-double-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="service-item">
+                        <div class="service-inner pb-5">
+                            <img class="img-fluid w-100" src="img/personne1.jpg" alt="">
+                            <div class="service-text px-5 pt-4">
+                                <h5 class="text-uppercase">Soutien scolaire</h5>
+                                    <p>Sessions hebdomadaires d’aide aux devoirs et accompagnement psychologique pour enfants déplacés.
+                                    </p>
+                            </div>
+                            <a class="btn btn-light px-3" href="">Read More<i
+                                    class="bi bi-chevron-double-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item">
+                        <div class="service-inner pb-5">
+                            <img class="img-fluid w-100" src="img/solidarite1.jpg" alt="">
+                            <div class="service-text px-5 pt-4">
+                                <h5 class="text-uppercase">Ateliers pour femmes</h5>
+                                    <p>Formations en artisanat et micro-entrepreneuriat pour favoriser l'autonomie économique des femmes.
+                                    </p>
+                            </div>
+                            <a class="btn btn-light px-3" href="">Voir Plus<i
+                                    class="bi bi-chevron-double-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item">
+                        <div class="service-inner pb-5">
+                            <img class="img-fluid w-100" src="img/happy1.jpg" alt="">
+                            <div class="service-text px-5 pt-4">
+                                <h5 class="text-uppercase">Réinsertion des jeunes</h5>
+                                    <p>Programmes d’accompagnement et d’orientation pour les jeunes en situation de vulnérabilité sociale.
+                                    </p>
+                            </div>
+                            <a class="btn btn-light px-3" href="">Voir Plus<i
+                                    class="bi bi-chevron-double-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item">
+                        <div class="service-inner pb-5">
+                            <img class="img-fluid w-100" src="img/happy3.jpg" alt="">
+                            <div class="service-text px-5 pt-4">
+                                <h5 class="text-uppercase">Nettoyage communautaire</h5>
+                                    <p>Journée de mobilisation citoyenne pour assainir les rues et sensibiliser à la gestion des déchets.
+                                    </p>
+                            </div>
+                            <a class="btn btn-light px-3" href="">Voir Plus<i
+                                    class="bi bi-chevron-double-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="service-item">
+                        <div class="service-inner pb-5">
+                            <img class="img-fluid w-100" src="img/Bien_etre.jpg" alt="">
+                            <div class="service-text px-5 pt-4">
+                                <h5 class="text-uppercase">Reboisement</h5>
+                                    <p>Plus de 1 000 arbres plantés en milieu rural avec l’implication active de la jeunesse locale.
+                                    </p>
+                            </div>
+                            <a class="btn btn-light px-3" href="">Voir Plus<i
+                                    class="bi bi-chevron-double-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+
+    <!-- Appoinment Start -->
+<div class="container-fluid appoinment mt-6 mb-6 py-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container pt-5">
+        <div class="row gy-5 gx-0">
+            <!-- Partie gauche -->
+            <div class="col-lg-6 pe-lg-5 wow fadeIn" data-wow-delay="0.3s">
+                <h1 class="display-6 text-uppercase text-white mb-4">
+                    Nous sommes là pour vous redonner le sourire
+                </h1>
+                <p class="text-white mb-5 wow fadeIn" data-wow-delay="0.4s">
+                    Vous méritez les meilleurs soins à chaque instant. Notre équipe médicale vous accompagne 24h/24 avec expertise et bienveillance.
+                </p>
+                <div class="d-flex align-items-start wow fadeIn" data-wow-delay="0.5s">
+                    <div class="btn-lg-square bg-white">
+                        <i class="bi bi-geo-alt text-dark fs-3"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="text-white text-uppercase">Adresse</h6>
+                        <span class="text-white">84 avenue du Président Bédié, 93210 Abidjan</span>
+                    </div>
+                </div>
+                <hr class="bg-body">
+                <div class="d-flex align-items-start wow fadeIn" data-wow-delay="0.6s">
+                    <div class="btn-lg-square bg-white">
+                        <i class="bi bi-clock text-dark fs-3"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="text-white text-uppercase">Heures d’ouverture</h6>
+                        <span class="text-white">24h/24, 7j/7</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulaire -->
+            <div class="col-lg-6 mb-n5 wow fadeIn" data-wow-delay="0.7s">
+                <div class="bg-white p-5">
+                    <h2 class="text-uppercase mb-4">Prendre rendez-vous</h2>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control border-0 bg-light" id="name" placeholder="Votre nom">
+                                <label for="name">Votre nom</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control border-0 bg-light" id="mail" placeholder="Votre email">
+                                <label for="mail">Votre email</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control border-0 bg-light" id="mobile" placeholder="Votre mobile">
+                                <label for="mobile">Votre mobile</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-floating">
+                                <select class="form-select border-0 bg-light" id="service">
+                                    <option selected disabled>Choisissez un service</option>
+                                    <option value="consultation">Consultation générale</option>
+                                    <option value="dentaire">Soins dentaires</option>
+                                    <option value="vision">Examen de la vue</option>
+                                    <option value="pediatrie">Pédiatrie</option>
+                                    <option value="vaccination">Vaccination</option>
+                                    <option value="urgence">Urgence médicale</option>
+                                    <option value="analyse">Analyses de laboratoire</option>
+                                    <option value="physio">Physiothérapie</option>
+                                </select>
+                                <label for="service">Choisissez un service</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control border-0 bg-light" placeholder="Laissez un message ici" id="message"
+                                    style="height: 130px"></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button class="btn btn-primary w-100 py-3" type="submit">Soumettre</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin formulaire -->
+        </div>
+    </div>
+</div>
+<!-- Appoinment End -->
+
+    <!-- Appoinment End -->
+
+
+    <!-- Team Start -->
+    <!-- <div class="container-fluid team pt-6 pb-6">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="display-6 text-uppercase mb-5">Meet Our Professional and Experience Welder</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-1">Alex Robin</h5>
+                            <span>Welder</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="team-item">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-1">Andrew Bon</h5>
+                            <span>Welder</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-1">Martin Tompson</h5>
+                            <span>Welder</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="team-item">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-1">Clarabelle Samber</h5>
+                            <span>Welder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid pt-6 pb-6">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="display-6 text-uppercase mb-5">Des témoignages de ceux que nous avons touchés</h1>
+            </div>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="testimonial-img">
+                        <div class="animated flip infinite">
+                            <img class="img-fluid" src="img/personne1.jpg" alt="">
+                        </div>
+                        <div class="animated flip infinite">
+                            <img class="img-fluid" src="img/personne2.jpg" alt="">
+                        </div>
+                        <div class="animated flip infinite">
+                            <img class="img-fluid" src="img/personne3.jpg" alt="">
+                        </div>
+                        <div class="animated flip infinite">
+                            <img class="img-fluid" src="img/personne4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="testimonial-item">
+                            <div class="d-flex align-items-center mb-4">
+                                <img class="img-fluid" src="img/don1.jpg" alt="">
+                                <div class="ms-3">
+                                    <div class="mb-2">
+                                        <i class="far fa-star text-primary"></i>
+                                        <i class="far fa-star text-primary"></i>
+                                        <i class="far fa-star text-primary"></i>
+                                        <i class="far fa-star text-primary"></i>
+                                        <i class="far fa-star text-primary"></i>
+                                    </div>
+                                    <h5 class="text-uppercase">Fatou Kéita</h5>
+                                    <span>Bénéficiaire – Abobo</span>
+                                </div>
+                            </div>
+                            <p class="fs-5">“Grâce aux actions de l’ONG 225 Events, mes enfants ont pu bénéficier de kits scolaires complets pour la rentrée. Une vraie bouffée d’air pour notre famille.”
+                            </p>
+                        </div>
+                        <div class="testimonial-item">
+                            <div class="d-flex align-items-center mb-4">
+                                <img class="img-fluid" src="img/don2.jpg" alt="">
+                                <div class="ms-3">
+                                    <div class="mb-2">
+                                        <i class="far fa-star text-primary"></i>
+                                        <i class="far fa-star text-primary"></i>
+                                        <i class="far fa-star text-primary"></i>
+                                        <i class="far fa-star text-primary"></i>
+                                        <i class="far fa-star text-primary"></i>
+                                    </div>
+                                    <h5 class="text-uppercase">Cédric Kouadio</h5>
+                                    <span>Volontaire – Yamoussoukro</span>
+                                </div>
+                            </div>
+                            <p class="fs-5">“Participer aux événements communautaires organisés par l’ONG m’a permis de me sentir utile et de créer de vrais liens avec les autres bénévoles.”
+                            </p>
+                        </div>
+                        <div class="testimonial-item">
+                            <div class="d-flex align-items-center mb-4">
+                                <img class="img-fluid" src="img/don3.jpg" alt="">
+                                <div class="ms-3">
+                                    <div class="mb-2">
+                                        <i class="far fa-star text-primary"></i>
+                                        <i class="far fa-star text-primary"></i>
+                                        <i class="far fa-star text-primary"></i>
+                                        <i class="far fa-star text-primary"></i>
+                                        <i class="far fa-star text-primary"></i>
+                                    </div>
+                                    <h5 class="text-uppercase">stephanie ruth</h5>
+                                    <span>Artisane – Bouaké</span>
+                                </div>
+                            </div>
+                            <p class="fs-5">“Lors du salon des femmes entrepreneures, j’ai pu exposer mes produits à un large public. L’ONG m’a offert une vraie visibilité.”
+                            </p>
+                        </div>
+                        <div class="testimonial-item">
+                            <div class="d-flex align-items-center mb-4">
+                                <img class="img-fluid" src="img/aliman.jpg" alt="">
+                                <div class="ms-3">
+                                    <div class="mb-2">
+                                        <i class="far fa-star text-primary"></i>
+                                        <i class="far fa-star text-primary"></i>
+                                        <i class="far fa-star text-primary"></i>
+                                        <i class="far fa-star text-primary"></i>
+                                        <i class="far fa-star text-primary"></i>
+                                    </div>
+                                    <h5 class="text-uppercase">Jean-Baptiste Traoré</h5>
+                                    <span>Responsable local – Man</span>
+                                </div>
+                            </div>
+                            <p class="fs-5">“225 Events a su mobiliser la jeunesse lors de notre campagne de nettoyage de quartier. Une ONG sérieuse et engagée.”
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Newsletter Start -->
+    <div class="container-fluid newsletter mt-6 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container pb-5">
+            <div class="bg-white p-5 mb-5">
+                <div class="row g-5">
+                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
+                        <h1 class="display-6 text-uppercase mb-4">Inscrivez-vous à notre Newsletter</h1>
+                        <div class="d-flex">
+                            <i class="far fa-envelope-open fa-3x text-primary me-4"></i>
+                            <p class="fs-5 fst-italic mb-0">Recevez nos dernières actualités, opportunités de bénévolat, et évènements communautaires directement dans votre boîte mail.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control border-0 bg-light" id="mail" placeholder="votre Email">
+                            <label for="mail">Votre Email</label>
+                        </div>
+                        <button class="btn btn-primary w-100 py-3" type="submit">S’abonner</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter Start -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase text-light mb-4">Notre Siège</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Abidjan, Côte d'Ivoire</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+225 05 05 883 696</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-3">
+                        <a class="btn btn-square btn-light me-2" href=""><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-light me-2" href=""><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-light me-2" href=""><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-light me-2" href=""><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase text-light mb-4">Liens Rapides</h5>
+                    <a class="btn btn-link" href="">À propos de nous</a>
+                    <a class="btn btn-link" href="">Nous contacter</a>
+                    <a class="btn btn-link" href="">Nos Intervention</a>
+                    <a class="btn btn-link" href="">Conditions générales</a>
+                    <a class="btn btn-link" href="">Foire aux questions</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase text-light mb-4">Heures d’ouverture</h5>
+                    <p class="text-uppercase mb-0">Lundi - Vendredi</p>
+                    <p>24h/24</p>
+                    <p class="text-uppercase mb-0">Samedi</p>
+                    <p>06:00 am - 20:00 pm</p>
+                    <p class="text-uppercase mb-0">Dimanche</p>
+                    <p>06:00 am - 12:00 pm</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase text-light mb-4">Gallerie</h5>
+                    <div class="row g-1">
+                        <div class="col-4">
+                            <img class="img-fluid" src="img/banniere2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid" src="img/solidarite.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid" src="img/happy2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid" src="img/Bien_etre.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid" src="img/solidarite1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid" src="img/nourriture.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid text-body copyright py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="fw-semi-bold" href="#">Your Site ONG</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    Designed By <a class="fw-semi-bold" href="">Andy</a> Distributed by <a href="" target="_blank">Kurt</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
