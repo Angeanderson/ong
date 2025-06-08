@@ -7,7 +7,44 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-
+    <style>
+        .language-selector {
+          position: relative;
+          display: inline-block;
+        }
+    
+        .language-button {
+          padding: 10px 16px;
+          border: 1px solid #ccc;
+          background-color: #f0f0f0;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+    
+        .language-list {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          min-width: 160px;
+          border: 1px solid #ccc;
+          background-color: white;
+          border-radius: 5px;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+          z-index: 1000;
+        }
+    
+        .language-list a {
+          display: block;
+          padding: 10px;
+          color: #333;
+          text-decoration: none;
+        }
+    
+        .language-list a:hover {
+          background-color: #f5f5f5;
+        }
+      </style>
     <!-- Favicon -->
     <link href="img/logo.jpeg" rel="icon">
 <link rel="stylesheet" href="img/logo.png">
@@ -86,11 +123,10 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Thematique</a>
                             <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                                <a href="feature.html" class="dropdown-item">Features</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="appoinment.html" class="dropdown-item">Appoinment</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
+                                <a href="feature.html" class="dropdown-item">Caractéristiques</a>
+                                <a href="team.html" class="dropdown-item">Equipes</a>
+                                <a href="testimonial.html" class="dropdown-item">Temoignage</a>
+                                <a href="appoinment.html" class="dropdown-item">rendez-vous</a>
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -98,6 +134,19 @@
 <!-- Bouton avec rayonnement rectangulaire orange -->
 <div class="ms-auto d-none d-lg-block position-relative">
     <a href="#" class="btn-donate-glow btn btn-primary py-2 px-4">Faites un Don</a>
+    <div class="language-selector">
+        <div class="language-button" onclick="toggleLanguageList()">🌐 Langue</div>
+        <div class="language-list" id="languageList">
+          <a href="#" onclick="changeLanguage('fr')">🇫🇷 Français</a>
+          <a href="#" onclick="changeLanguage('en')">🇬🇧 English</a>
+          <a href="#" onclick="changeLanguage('es')">🇪🇸 Español</a>
+          <a href="#" onclick="changeLanguage('tr')">🇹🇷 Türkçe</a>
+          <a href="#" onclick="changeLanguage('ru')">🇷🇺 Русский</a>
+          <a href="#" onclick="changeLanguage('zh')">🇨🇳 中文 (Mandarin)</a>
+          <a href="#" onclick="changeLanguage('ar')">🇸🇦 العربية</a>
+          <a href="#" onclick="changeLanguage('pt')">🇵🇹 Português</a>
+        </div>
+      </div>
 </div>
 
 <style>
@@ -164,7 +213,17 @@
                     <div class="carousel-caption">
                         <h1 class="display-1 text-uppercase text-white mb-4 animated zoomIn">Agir Pour Sauvez Une Vie
                         </h1>
-                        <a href="#" class="btn-donate-glow btn btn-primary py-3 px-4">Faite Un Don</a>
+                        <div style="display: flex; gap: 16px; align-items: center;">
+                            <a href="#" class="btn-donate-glow btn btn-primary py-3 px-4">Faites un don</a>
+                        
+                            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" 
+                               class="glightbox btn-watch-video d-flex align-items-center"
+                               style="border: 2px solid #171a1e; padding: 10px 16px; border-radius: 8px; text-decoration: none; color: #0d6efd;">
+                                <i class="bi bi-play-circle" style="margin-right: 8px;"></i>
+                                <span style="color: #FFA500;">Presentation</span>
+                            </a>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -172,7 +231,16 @@
                     <div class="carousel-caption">
                         <h1 class="display-1 text-uppercase text-white mb-4 animated zoomIn">Ensemble, Main Dans La Main 
                         </h1>
-                        <a href="#" class="btn-donate-glow btn btn-primary py-3 px-4">Faite Un Don</a>
+                        <div style="display: flex; gap: 16px; align-items: center;">
+                            <a href="#" class="btn-donate-glow btn btn-primary py-3 px-4">Faites un don</a>
+                        
+                            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" 
+                               class="glightbox btn-watch-video d-flex align-items-center"
+                               style="border: 2px solid #171a1e; padding: 10px 16px; border-radius: 8px; text-decoration: none; color: #0d6efd;">
+                                <i class="bi bi-play-circle" style="margin-right: 8px;"></i>
+                                <span style="color: #FFA500;">Presentation</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -180,7 +248,16 @@
                     <div class="carousel-caption">
                         <h1 class="display-1 text-uppercase text-white mb-4 animated zoomIn">Jeunesse africaine, ton continent a besoin de toi
                         </h1>
-                        <a href="#" class="btn-donate-glow btn btn-primary py-3 px-4">Faite Un Don</a>
+                        <div style="display: flex; gap: 16px; align-items: center;">
+                            <a href="#" class="btn-donate-glow btn btn-primary py-3 px-4">Faites un don</a>
+                        
+                            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" 
+                               class="glightbox btn-watch-video d-flex align-items-center"
+                               style="border: 2px solid #171a1e; padding: 10px 16px; border-radius: 8px; text-decoration: none; color: #0d6efd;">
+                                <i class="bi bi-play-circle" style="margin-right: 8px;"></i>
+                                <span style="color: #FFA500;">Presentation</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -188,107 +265,107 @@
     </div>
     <!-- Carousel End -->
 
-
-    <!-- About Start -->
-    <div class="container-fluid pt-6 pb-6">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="about-img">
-                        <img class="img-fluid w-100" src="img/about1.jpg">
-                    </div>
+<!-- About Start -->
+<div class="container-fluid pt-6 pb-6">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="about-img">
+                    <img class="img-fluid w-100" src="img/about1.jpg" alt="Voyage à vélo à travers l'Afrique">
                 </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="display-6 text-uppercase mb-4">
-                        Agir pour les vies en détresse : un engagement urgent
-                        </h1>
-                    <p class="mb-4">Dans un monde marqué par l'injustice sociale, les conflits, l'exclusion et la précarité, des milliers de jeunes, de femmes et d'enfants se retrouvent chaque jour sans repères ni soutien. Notre ONG s'engage avec détermination pour leur offrir protection, écoute, accompagnement et un avenir meilleur. Malgré les défis liés au manque de financement et à l'évolution incertaine du contexte international, nous restons mobilisés pour répondre aux urgences et bâtir des solutions durables. </p>
-                    <div class="row g-5 mb-4">
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0 btn-xl-square bg-light me-3">
-                                    <i class="fa fa-users-cog fa-2x text-primary"></i>
-                                </div>
-                                <h5 class="lh-base text-uppercase mb-0">Équipe Dévouée & Expérimentée</h5>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <h1 class="display-6 text-uppercase mb-4">
+                    Un voyage inédit – Un documentaire
+                </h1>
+                <p class="mb-4">
+                    Pour la première fois dans l’histoire de l’Afrique Subsaharienne, une jeune femme de 34 ans, originaire d’Afrique de l’Ouest, entreprend un périple à vélo à travers le continent. Ce moyen de transport écologique réduit l’empreinte carbone et permet de vivre en immersion au cœur des communautés locales.
+                </p>
+                <p class="mb-4">
+                    Ce voyage est aussi une quête : rencontrer des jeunes acteurs de changement qui, sur le terrain, proposent des solutions innovantes en faveur de l’autonomisation de la jeunesse. À travers cette initiative, Yasmine souhaite mettre en lumière les Objectifs de Développement Durable suivants :
+                </p>
+                <ul class="mb-4">
+                    <li><i class="fa fa-check-square text-primary me-2"></i>ODD 4 : Éducation de qualité</li>
+                    <li><i class="fa fa-check-square text-primary me-2"></i>ODD 5 : Égalité entre les sexes</li>
+                    <li><i class="fa fa-check-square text-primary me-2"></i>ODD 8 : Travail décent et croissance économique</li>
+                    <li><i class="fa fa-check-square text-primary me-2"></i>ODD 9 : Industrie, innovation et infrastructure</li>
+                    <li><i class="fa fa-check-square text-primary me-2"></i>ODD 13 : Action climatique</li>
+                    <li><i class="fa fa-check-square text-primary me-2"></i>ODD 16 : Paix, justice et institutions efficaces</li>
+                </ul>
+                <p class="mb-4">
+                    Ce périple vise également à relier deux pays symboliques :
+                </p>
+                <p class="mb-2"><strong>•</strong> L’un est le premier producteur mondial de cacao, représentant 40 % de la production mondiale.</p>
+                <p class="mb-4"><strong>•</strong> L’autre est le pays qui a réussi la première greffe du cœur sur le continent.</p>
+                <p class="mb-4">
+                    Ce voyage lance un appel fort à l’action : <strong>jeunes, citoyens, décideurs,</strong> nous devons faire mieux. Le dividende démographique de l’Afrique ne sera positif que si nous investissons massivement dans une industrialisation efficace et durable.
+                </p>
+                <div class="border border-5 border-primary p-4 text-center mt-4">
+                    <h4 class="lh-base text-uppercase mb-0">Un appel à l’action pour un avenir meilleur en Afrique</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+<!-- Features Start -->
+<div class="container-fluid feature mt-6 mb-6 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row g-0 justify-content-end">
+            <div class="col-lg-6 pt-5">
+                <div class="mt-5">
+                    <h1 class="display-6 text-white text-uppercase mb-4 wow fadeIn" data-wow-delay="0.3s">Qui sommes-nous ?</h1>
+                    <p class="text-light mb-4 wow fadeIn" data-wow-delay="0.4s">
+                        Wiri en dioula (ou plutôt en langue malinké) signifie debout. Debout, comme pour dire : Afrique Debout !  
+                        La plus grande ressource de l’Afrique : sa jeunesse. La baisse de la mortalité, une fécondité élevée et en baisse lente, ainsi que la structure par âge jeune sont à l’origine de la croissance démographique rapide de l’Afrique. 
+                        La population africaine en âge de travailler (15-64 ans) était estimée à 750 millions en 2019 et devrait dépasser le milliard avant 2030 et atteindre 1,1 milliard d’ici 2035. 
+                        Les jeunes Africains (15-24 ans) entrent sur le marché du travail à un rythme d’environ 20 millions chaque année. 
+                        L’essor de la population jeune en Afrique pourrait se traduire soit par un dividende démographique, soit par une bombe à retardement démographique.
+                    </p>
+                    <div class="row g-4 pt-2 mb-4">
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                            <div class="flex-column text-center border border-5 border-primary p-5">
+                                <h1 class="text-white" data-toggle="counter-up">3092629</h1>
+                                <p class="text-white text-uppercase mb-0">Impactés positivement dans le monde</p>
                             </div>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0 btn-xl-square bg-light me-3">
-                                    <i class="fa fa-tachometer-alt fa-2x text-primary"></i>
-                                </div>
-                                <h5 class="lh-base text-uppercase mb-0">Actions Rapides & Fiables</h5>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="flex-column text-center border border-5 border-primary p-5">
+                                <h1 class="text-white" data-toggle="counter-up">43</h1>
+                                <p class="text-white text-uppercase mb-0">pays où nous travaillons</p>
                             </div>
                         </div>
                     </div>
-                    <p><i class="fa fa-check-square text-primary me-3"></i>Écoute active et accompagnement personnalisé
-                    </p>
-                    <p><i class="fa fa-check-square text-primary me-3"></i>Programmes de réinsertion sociale et professionnelle
-                    </p>
-                    <p><i class="fa fa-check-square text-primary me-3"></i>Protection des droits et accès aux soins essentiels
-                    </p>
-                    <div class="border border-5 border-primary p-4 text-center mt-4">
-                        <h4 class="lh-base text-uppercase mb-0">Un seul don peut redonner espoir à des centaines de vies</h4>
+                    <div class="border border-5 border-primary border-bottom-0 p-5">
+                        <div class="experience mb-4 wow fadeIn" data-wow-delay="0.6s">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-white text-uppercase">Experience</span>
+                                <span class="text-white">90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="experience wow fadeIn" data-wow-delay="0.7s">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-white text-uppercase">de notre personnel vient des communautés locales</span>
+                                <span class="text-white">95%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- About End -->
-
-
-
-
-    <!-- Features Start -->
-    <div class="container-fluid feature mt-6 mb-6 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="row g-0 justify-content-end">
-                <div class="col-lg-6 pt-5">
-                    <div class="mt-5">
-                        <h1 class="display-6 text-white text-uppercase mb-4 wow fadeIn" data-wow-delay="0.3s">Qui sommes-nous ?</h1>
-                        <p class="text-light mb-4 wow fadeIn" data-wow-delay="0.4s">Wiri ONG est une organisation humanitaire engagée pour les jeunes, les femmes et les enfants en détresse. Présente sur plusieurs continents, notre équipe agit en première ligne face à la pauvreté, aux violences, aux crises humanitaires et aux inégalités. Nous allions aide d’urgence et solutions durables pour bâtir un avenir plus juste et plus humain.</p>
-                        <div class="row g-4 pt-2 mb-4">
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
-                                <div class="flex-column text-center border border-5 border-primary p-5">
-                                    <h1 class="text-white" data-toggle="counter-up">7092629</h1>
-                                    <p class="text-white text-uppercase mb-0">vies impactées positivement dans le monde l’an dernier</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                                <div class="flex-column text-center border border-5 border-primary p-5">
-                                    <h1 class="text-white" data-toggle="counter-up">43</h1>
-                                    <p class="text-white text-uppercase mb-0">pays où nous travaillons</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-primary border-bottom-0 p-5">
-                            <div class="experience mb-4 wow fadeIn" data-wow-delay="0.6s">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span class="text-white text-uppercase">Experience</span>
-                                    <span class="text-white">90%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="experience wow fadeIn" data-wow-delay="0.7s">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span class="text-white text-uppercase">de notre personnel vient des communautés locales</span>
-                                    <span class="text-white">95%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Features End -->
+</div>
+<!-- Features End -->
 
 
     <!-- Service Start -->
@@ -307,8 +384,8 @@
                                     <p>Nous avons distribué plus de 500 kits alimentaires dans les zones les plus touchées par la sécheresse.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Voir Plus<i
-                                    class="bi bi-chevron-double-right ms-1"></i></a>
+                            <a class="btn btn-light px-3" href="voir_plus.html">Voir Plus<i
+                                class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -321,7 +398,7 @@
                                     <p>Notre équipe médicale a soigné plus de 300 personnes en zones reculées sans accès aux soins de base.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Voir Plus<i
+                            <a class="btn btn-light px-3" href="voir_plus.html">Voir Plus<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -335,7 +412,7 @@
                                     <p>Ateliers pour enfants sur l’importance du lavage des mains et de l’hygiène corporelle en milieu scolaire.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Voir Plus<i
+                            <a class="btn btn-light px-3" href="voir_plus.html">Voir Plus<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -349,7 +426,7 @@
                                     <p>Sessions hebdomadaires d’aide aux devoirs et accompagnement psychologique pour enfants déplacés.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Read More<i
+                            <a class="btn btn-light px-3" href="voir_plus.html">Voir Plus<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -363,7 +440,7 @@
                                     <p>Formations en artisanat et micro-entrepreneuriat pour favoriser l'autonomie économique des femmes.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Voir Plus<i
+                            <a class="btn btn-light px-3" href="voir_plus.html">Voir Plus<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -377,7 +454,7 @@
                                     <p>Programmes d’accompagnement et d’orientation pour les jeunes en situation de vulnérabilité sociale.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Voir Plus<i
+                            <a class="btn btn-light px-3" href="voir_plus.html">Voir Plus<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -391,7 +468,7 @@
                                     <p>Journée de mobilisation citoyenne pour assainir les rues et sensibiliser à la gestion des déchets.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Voir Plus<i
+                            <a class="btn btn-light px-3" href="voir_plus.html">Voir Plus<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -405,7 +482,7 @@
                                     <p>Plus de 1 000 arbres plantés en milieu rural avec l’implication active de la jeunesse locale.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Voir Plus<i
+                            <a class="btn btn-light px-3" href="voir_plus.html">Voir Plus<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -512,16 +589,16 @@
 
 
     <!-- Team Start -->
-    <!-- <div class="container-fluid team pt-6 pb-6">
+    <div class="container-fluid team pt-6 pb-6">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h1 class="display-6 text-uppercase mb-5">Meet Our Professional and Experience Welder</h1>
+                <h1 class="display-6 text-uppercase mb-5">Equipes</h1>
             </div>
             <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+                            <img class="img-fluid w-100" src="img/personne1.jpg" alt="">
                             <div class="team-social">
                                 <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -535,10 +612,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="team-item">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
+                            <img class="img-fluid w-100" src="img/personne1.jpg" alt="">
                             <div class="team-social">
                                 <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -552,27 +629,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                     <div class="team-item">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-1">Martin Tompson</h5>
-                            <span>Welder</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="team-item">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+                            <img class="img-fluid w-100" src="img/personne1.jpg" alt="">
                             <div class="team-social">
                                 <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-dark mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -588,7 +649,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- Team End -->
 
 

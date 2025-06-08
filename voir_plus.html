@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Détail Événement</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+
+<!-- ✅ Modal Détail + Avis affichée automatiquement -->
+<div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+  <div class="bg-white p-6 rounded-2xl shadow-2xl w-full max-w-4xl relative overflow-y-auto max-h-screen">
+
+    <!-- Bouton de fermeture -->
+    <button class="absolute top-4 right-4 text-gray-500 hover:text-red-600 text-2xl" onclick="window.location.href='index.html'">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <!-- Image de l'événement -->
+    <div class="mb-6">
+      <img src="img/about1.jpg" alt="Image Événement"
+           class="w-full h-64 object-cover rounded-lg shadow-md">
+    </div>
+
+    <!-- Détails -->
+    <h2 class="text-3xl font-bold mb-4 text-gray-800">Détails de l'événement</h2>
+    <p class="mb-6 text-gray-700 leading-relaxed">
+        Pour la première fois dans l’histoire de l’Afrique Subsaharienne, une jeune femme de 34 ans, originaire d’Afrique de l’Ouest, entreprend un périple à vélo à travers le continent. Ce moyen de transport écologique réduit l’empreinte carbone et permet de vivre en immersion au cœur des communautés locales.
+        Ce voyage est aussi une quête : rencontrer des jeunes acteurs de changement qui, sur le terrain, proposent des solutions innovantes en faveur de l’autonomisation de la jeunesse. À travers cette initiative, Yasmine souhaite mettre en lumière les Objectifs de Développement Durable.
+    </p>
+
+    <hr class="my-6">
+
+    <!-- Bouton avis -->
+    <button onclick="document.getElementById('avis').classList.toggle('hidden')" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded shadow">
+      Donnez votre avis <i class="fas fa-comment-alt ml-2"></i>
+    </button>
+
+    <!-- Section Avis -->
+    <div id="avis" class="mt-6 hidden">
+      <form>
+        <label for="commentaire" class="block font-semibold mb-2 text-gray-800">Votre commentaire</label>
+        <textarea id="commentaire" class="w-full p-3 border rounded mb-4" rows="4" placeholder="Exprimez votre avis..."></textarea>
+
+        <!-- Étoiles -->
+        <div class="mb-4">
+          <label class="block font-semibold mb-2 text-gray-800">Note</label>
+          <div class="flex text-yellow-400 space-x-2 text-2xl cursor-pointer">
+            <i class="far fa-star hover:text-yellow-500"></i>
+            <i class="far fa-star hover:text-yellow-500"></i>
+            <i class="far fa-star hover:text-yellow-500"></i>
+            <i class="far fa-star hover:text-yellow-500"></i>
+            <i class="far fa-star hover:text-yellow-500"></i>
+          </div>
+        </div>
+
+        <!-- Pouces -->
+        <div class="flex space-x-6 text-3xl mt-2">
+          <i class="far fa-thumbs-up text-green-600 hover:text-green-800 cursor-pointer"></i>
+          <i class="far fa-thumbs-down text-red-600 hover:text-red-800 cursor-pointer"></i>
+        </div>
+
+        <button type="submit" class="mt-6 bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700 shadow">
+          Envoyer l'avis
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

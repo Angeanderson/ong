@@ -7,7 +7,44 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-
+    <style>
+        .language-selector {
+          position: relative;
+          display: inline-block;
+        }
+    
+        .language-button {
+          padding: 10px 16px;
+          border: 1px solid #ccc;
+          background-color: #f0f0f0;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+    
+        .language-list {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          min-width: 160px;
+          border: 1px solid #ccc;
+          background-color: white;
+          border-radius: 5px;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+          z-index: 1000;
+        }
+    
+        .language-list a {
+          display: block;
+          padding: 10px;
+          color: #333;
+          text-decoration: none;
+        }
+    
+        .language-list a:hover {
+          background-color: #f5f5f5;
+        }
+      </style>
     <!-- Favicon -->
     <link href="img/logo.jpeg" rel="icon">
 <link rel="stylesheet" href="img/logo.png">
@@ -81,17 +118,16 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="index.html" class="nav-item nav-link ">Home</a>
                         <a href="Vision.html" class="nav-item nav-link">Vision</a>
-                        <a href="Activite.html" class="nav-item nav-link">Activite</a>
+                        <a href="Activite.html" class="nav-item nav-link active">Activite</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Thematique</a>
                             <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                                <a href="feature.html" class="dropdown-item">Features</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="appoinment.html" class="dropdown-item">Appoinment</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
+                                <a href="feature.html" class="dropdown-item">Caractéristiques</a>
+                                <a href="team.html" class="dropdown-item">Equipes</a>
+                                <a href="testimonial.html" class="dropdown-item">Temoignage</a>
+                                <a href="appoinment.html" class="dropdown-item">rendez-vous</a>
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -99,6 +135,19 @@
 <!-- Bouton avec rayonnement rectangulaire orange -->
 <div class="ms-auto d-none d-lg-block position-relative">
     <a href="#" class="btn-donate-glow btn btn-primary py-2 px-4">Faites un Don</a>
+    <div class="language-selector">
+        <div class="language-button" onclick="toggleLanguageList()">🌐 Langue</div>
+        <div class="language-list" id="languageList">
+          <a href="#" onclick="changeLanguage('fr')">🇫🇷 Français</a>
+          <a href="#" onclick="changeLanguage('en')">🇬🇧 English</a>
+          <a href="#" onclick="changeLanguage('es')">🇪🇸 Español</a>
+          <a href="#" onclick="changeLanguage('tr')">🇹🇷 Türkçe</a>
+          <a href="#" onclick="changeLanguage('ru')">🇷🇺 Русский</a>
+          <a href="#" onclick="changeLanguage('zh')">🇨🇳 中文 (Mandarin)</a>
+          <a href="#" onclick="changeLanguage('ar')">🇸🇦 العربية</a>
+          <a href="#" onclick="changeLanguage('pt')">🇵🇹 Português</a>
+        </div>
+      </div>
 </div>
 
 <style>
@@ -183,8 +232,8 @@
                                     <p>Nous avons distribué plus de 500 kits alimentaires dans les zones les plus touchées par la sécheresse.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Voir Plus<i
-                                    class="bi bi-chevron-double-right ms-1"></i></a>
+                            <a class="btn btn-light px-3" href="voir_plus.html">Voir Plus<i
+                                class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -197,7 +246,7 @@
                                     <p>Notre équipe médicale a soigné plus de 300 personnes en zones reculées sans accès aux soins de base.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Voir Plus<i
+                            <a class="btn btn-light px-3" href="voir_plus.html">Voir Plus<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -211,7 +260,7 @@
                                     <p>Ateliers pour enfants sur l’importance du lavage des mains et de l’hygiène corporelle en milieu scolaire.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Voir Plus<i
+                            <a class="btn btn-light px-3" href="voir_plus.html">Voir Plus<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -225,7 +274,7 @@
                                     <p>Sessions hebdomadaires d’aide aux devoirs et accompagnement psychologique pour enfants déplacés.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Read More<i
+                            <a class="btn btn-light px-3" href="voir_plus.html">Read More<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -239,7 +288,7 @@
                                     <p>Formations en artisanat et micro-entrepreneuriat pour favoriser l'autonomie économique des femmes.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Voir Plus<i
+                            <a class="btn btn-light px-3" href="voir_plus.html">Voir Plus<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -253,7 +302,7 @@
                                     <p>Programmes d’accompagnement et d’orientation pour les jeunes en situation de vulnérabilité sociale.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Voir Plus<i
+                            <a class="btn btn-light px-3" href="voir_plus.html">Voir Plus<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -267,7 +316,7 @@
                                     <p>Journée de mobilisation citoyenne pour assainir les rues et sensibiliser à la gestion des déchets.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Voir Plus<i
+                            <a class="btn btn-light px-3" href="voir_plus.html">Voir Plus<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -281,7 +330,7 @@
                                     <p>Plus de 1 000 arbres plantés en milieu rural avec l’implication active de la jeunesse locale.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Voir Plus<i
+                            <a class="btn btn-light px-3" href="voir_plus.html">Voir Plus<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>

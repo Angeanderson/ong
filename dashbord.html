@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tableau de bord</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Sidebar -->
+  <div class="flex h-screen">
+    <aside class="w-64 bg-white shadow-lg hidden md:block">
+      <div class="p-6">
+        <h1 class="text-2xl font-bold text-indigo-600">Mon Dashboard</h1>
+      </div>
+      <nav class="mt-6">
+        <ul>
+          <li class="px-6 py-2 hover:bg-indigo-100"><a href="index.html"><i class="fas fa-home mr-2"></i>Menu</a></li>
+          <li class="px-6 py-2 bg-indigo-100"><a href="dashbord.html"><i class="fas fa-chart-line mr-2"></i>dashbord</a></li>
+          <li class="px-6 py-2 hover:bg-indigo-100"><a href="utilisateurs.html"><i class="fas fa-users mr-2"></i>Utilisateurs</a></li>
+          <li class="px-6 py-2 hover:bg-indigo-100"><a href="blog.html"><i class="fas fa-users mr-2"></i>Blog</a></li>
+          <li class="px-6 py-2 hover:bg-indigo-100"><a href="evenements_avenir.html"><i class="fas fa-box mr-2"></i>Événement Avenir</a></li>
+          <li class="px-6 py-2 hover:bg-indigo-100"><a href="evenements_passer.html"><i class="fas fa-box mr-2"></i>Événement Passé</a></li>
+          <li class="px-6 py-2 hover:bg-indigo-100"><a href="parametres.html"><i class="fas fa-cog mr-2"></i>Paramètres</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenu principal -->
+    <div class="flex-1 flex flex-col overflow-hidden">
+      
+      <!-- Navbar -->
+      <header class="bg-white shadow flex justify-between items-center px-6 py-4">
+        <h2 class="text-xl font-semibold text-gray-700">Tableau de bord</h2>
+        <div class="flex items-center space-x-4">
+          <button class="text-gray-500"><i class="fas fa-bell"></i></button>
+          <img src="https://i.pravatar.cc/40" alt="Avatar" class="w-10 h-10 rounded-full">
+        </div>
+      </header>
+
+      <!-- Statistiques -->
+      <main class="p-6 overflow-y-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div class="bg-white p-4 rounded-lg shadow">
+            <div class="flex items-center space-x-4">
+              <div class="bg-indigo-100 p-3 rounded-full text-indigo-500"><i class="fas fa-users"></i></div>
+              <div>
+                <p class="text-gray-500 text-sm">Visiteur</p>
+                <p class="text-xl font-semibold">1,245</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow">
+            <div class="flex items-center space-x-4">
+              <div class="bg-green-100 p-3 rounded-full text-green-500"><i class="fas fa-dollar-sign"></i></div>
+              <div>
+                <p class="text-gray-500 text-sm">Don</p>
+                <p class="text-xl font-semibold">15,800 €</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow">
+            <div class="flex items-center space-x-4">
+              <div class="bg-yellow-100 p-3 rounded-full text-yellow-500"><i class="fas fa-box"></i></div>
+              <div>
+                <p class="text-gray-500 text-sm">Commentaire 7 Dernier J</p>
+                <p class="text-xl font-semibold">320</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow">
+            <div class="flex items-center space-x-4">
+              <div class="bg-red-100 p-3 rounded-full text-red-500"><i class="fas fa-exclamation-triangle"></i></div>
+              <div>
+                <p class="text-gray-500 text-sm">Problèmes</p>
+                <p class="text-xl font-semibold">5</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Graphique -->
+        <div class="bg-white rounded-lg shadow p-6 mt-6">
+          <h3 class="text-lg font-bold mb-4">Performance mensuelle</h3>
+          <canvas id="myChart" height="100"></canvas>
+        </div>
+
+        <!-- Activités récentes -->
+        <div class="bg-white rounded-lg shadow p-6 mt-6">
+          <h3 class="text-lg font-bold mb-4">Activités récentes</h3>
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li><i class="fas fa-user-plus text-green-500"></i> Nouvel utilisateur inscrit : <strong>26</strong></li>
+            <li><i class="fas fa-shopping-cart text-indigo-500"></i> Nouvelle commande : <strong>#CMD5489</strong></li>
+            <li><i class="fas fa-comment-dots text-yellow-500"></i> Commentaire reçu sur chaque Evenement</li>
+            <li><i class="fas fa-box text-blue-500"></i> Evenement <strong>.........</strong> mis à jour</li>
+          </ul>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Script graphique -->
+  <script>
+    const ctx = document.getElementById('myChart');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin','Juill','Aou','Sept','Oct','Nov','Dec'],
+        datasets: [{
+          label: 'Revenus (€)',
+          data: [3000, 4500, 3900, 5100, 6200, 7000,1060, 8500, 390, 8700, 5200, 9700],
+          backgroundColor: 'rgba(99, 102, 241, 0.7)'
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

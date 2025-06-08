@@ -85,3 +85,28 @@
     
 })(jQuery);
 
+
+    function toggleLanguageList() {
+      const list = document.getElementById("languageList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  
+    function changeLanguage(langCode) {
+      alert("Langue sélectionnée : " + langCode);
+  
+      // Redirection possible vers un sous-dossier de langue :
+      // window.location.href = "/" + langCode + "/";
+  
+      // Ou appel AJAX ou changement de texte en JS ici
+      document.getElementById("languageList").style.display = "none";
+    }
+  
+    // Fermer le menu si on clique en dehors
+    document.addEventListener("click", function(e) {
+      const list = document.getElementById("languageList");
+      if (!e.target.closest(".language-selector")) {
+        list.style.display = "none";
+      }
+    });
+
+  
